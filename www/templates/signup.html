@@ -1,0 +1,88 @@
+<ion-view>
+  <ion-content class="padding signupPage">
+  <ion-slide-box ion-wizard>
+  <ion-slide ion-wizard-step>
+  <div class="signupPage">
+  <div class="progress row">
+    <div class="progressItem active"><p>Step 1</p>
+    </div>
+      <div class="progressItem"><p>Step 2</p>
+      </div>
+    <div class="progressItem"><p>Step 3</p>
+    </div>
+    <div class="progressItem "><p>Step 4</p>
+    </div>
+  </div>
+    <h4 class="form-title">Step 1 - Property Manager Info</h4>
+  <form class="signupForm">
+    <div class="row">
+    <div class="form-input col ">
+      <input name="signup[name]" class="SI" id="SIname" autofocus type="text" placeholder="Name">
+    </div>
+    <div class="col col-10"></div>
+    <div class="form-input col">
+      <input name="signup[company]" class="SI" id="SIcompany" type="text" placeholder="Company Name">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-input col">
+      <input name="signup[address]" class="SI" id="SIaddress" type="text" placeholder="Address">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-input col">
+      <input name="signup[address2]" class="SI" id="SIaddress2" type="text" placeholder="Address Line 2 (not required)">
+    </div>
+  </div>
+    <div class="row">
+    <div class="form-input col col-33">
+      <input name="signup[city]" class="SI" id="SIcity" type="text" placeholder="City">
+    </div>
+    <div class="col col-1"></div>
+    <div class="form-input col col-20">
+      <input name="signup[state]" class="SI" id="SIstate" type="text" placeholder="State">
+    </div>
+    <div class="col col-1"></div>
+    <div class="form-input col col-33">
+      <input name="signup[zipcode]" class="SI" id="SIzipcode" type="text" placeholder="Zipcode">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-input col col-48">
+      <input name="signup[tel]" class="SI" id="SItel" type="tel" placeholder="(xxx) xxx-xxxx">
+    </div>
+    <div class="col col-10"></div>
+    <div class="form-input col col-48">
+      <input name="signup[email]" class="SI" id="SIEmail" type="email" placeholder="email@domain.com">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-input col">
+      <input name="signup[password]" class="SI" id="SIpassword" type="password" placeholder="Password">
+    </div>
+  </div>
+    <button type="submit" class="button button-full" ion-wizard-next>NEXT STEP</button>
+  </form>
+</div>
+</ion-slide>
+<ion-slide ion-wizard-step>
+<div class="signupPage page3">
+  <div class="progress row">
+    <div class="progressItem active col"><p>Step 1</p>
+    </div>
+      <div class="progressItem active col"><p>Step 2</p>
+      </div>
+    <div class="progressItem active col"><p>Step 3</p>
+    </div>
+    <div class="progressItem col"><p>Step 4</p>
+    </div>
+  </div>
+    <button type="submit" class="button button-full" ion-wizard-next>NEXT STEP</button>
+</div>
+</ion-slide>
+</ion-slide-box>
+  </ion-content>
+  <ion-footer-bar class="signupFooter">
+        <p>Copyright &copy; HOAtrac 2015. HOAtrac.com. All Rights Reserved</p>
+    </ion-footer-bar>
+</ion-view>
