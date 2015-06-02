@@ -9,14 +9,15 @@ angular.module('starter.controllers', [])
   // $http.get('http://localhost/houses', function(success, error) {
   //   }
   // })
-  $http.get("http://localhost:3000/houses").
+  $http.get("http://localhost:3000/associations").
     success(function(data, status, config) {
       console.log(data);
-      $scope.houses = data;
+      $scope.associations = data;
     }).
     error(function(data, status, config) {
     });
-  });
+});
+
 // .controller('ChatsCtrl', function($scope, Chats) {
 //   $scope.chats = Chats.all();
 //   $scope.remove = function(chat) {

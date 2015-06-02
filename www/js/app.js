@@ -45,6 +45,12 @@ angular.module('starter', ['ionic', 'ionic.wizard', 'starter.controllers', 'star
     url: '/dashboard',
     templateUrl: 'templates/dash.html',
     controller: 'DashboardCtrl'
+  })
+
+  .state('association', {
+    url: '/dashboard/:_id',
+    templateUrl: 'templates/association.html',
+    controller: 'DashboardCtrl'
   });
   // setup an abstract state for the tabs directive
   //   .state('tab', {
