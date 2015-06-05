@@ -31,7 +31,24 @@
                     <button type="submit" class="button">Submit</button>
                 </div>
               </form>
-        </div>
+            </div>
+            <div class="col">
+              <h4>Add Violation</h4>
+              <form method="POST" ng-submit="addViolation()">
+                  <div class="form-input col ">
+                    <input ng-model="violations.address" class="ASO" id="ASOaddress" autofocus type="text" placeholder="Address Number">
+                  </div>
+                  <div class="form-input col">
+                    <input ng-model="violations.street" class="ASO" id="ASOstreet" type="text" placeholder="Street">
+                  </div>
+                  <div class="form input col">
+                    <textarea ng-model="violation.info" class="ASO" id="ASOviolation" type="text" placeholder="Explain Violation">
+                      </textarea>
+                  <div class="form-input col">
+                    <button type="submit" class="button">Add Vioalation</button>
+                </div>
+              </form>
+            </div>
     </div>
   </div>
 </div>

@@ -37,6 +37,13 @@ Red (icons):*/
   width: 410px;
 }
 
+.form-title {
+  text-align: center;
+  color: #82BFE9;
+  padding: 10px 0 10px 0;
+}
+
+
 .column-radio-first {
   padding-left: 80px;
   padding-right: 20px;
@@ -194,12 +201,21 @@ label {
   min-height: 400px;
 }
 
-.page4 h4, h5, label, p {
+.form-title h4 {
+  color: #82BFE9;
+}
+
+.page4 .total, .page4 h5, label, p {
   color: grey;
 }
 
-.page4 p {
+.page4 {
   font-size: 18px;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .signupForm input {
@@ -223,11 +239,6 @@ label {
 .signupPage {
   background-color: #EFEFEF;
   padding-top: 30px;
-}
-
-.form-title {
-  text-align: center;
-  color: #82BFE9;
 }
 
 .progress {
