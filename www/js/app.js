@@ -53,6 +53,8 @@ angular.module('starter', ['ionic', 'ionic.wizard', 'starter.controllers', 'star
     controller: 'AssociationCtrl'
   })
 
+  $urlRouterProvider.otherwise('/signup');
+
 });
   // setup an abstract state for the tabs directive
   //   .state('tab', {
