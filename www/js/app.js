@@ -42,16 +42,18 @@ angular.module('starter', ['ionic', 'ionic.wizard', 'starter.controllers', 'star
   })
 
   .state('dash', {
-    url: '/dashboard',
+    url: '/associations',
     templateUrl: 'templates/dash.html',
     controller: 'DashboardCtrl'
   })
 
   .state('association', {
-    url: '/dashboard/:_id',
+    url: '/associations/:name',
     templateUrl: 'templates/association.html',
-    controller: 'DashboardCtrl'
-  });
+    controller: 'AssociationCtrl'
+  })
+
+});
   // setup an abstract state for the tabs directive
   //   .state('tab', {
   //   url: "/tab",
@@ -103,4 +105,3 @@ angular.module('starter', ['ionic', 'ionic.wizard', 'starter.controllers', 'star
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/tab/dash');
 
-});

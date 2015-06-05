@@ -10,8 +10,55 @@ Green (buttons, icons): 00A551
 Red (icons):*/
 /* Login */
 
+.label {
+  font-weight: bold;
+}
+
+.smallSpace {
+  padding-bottom: 5px;
+}
+
+.noUnderline {
+  text-decoration: none;
+}
+
+.select {
+  margin-left: 40px;
+  border: 1px solid black;
+  background: transparent;
+  width: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 2;
+  height: 30px;
+}
+
+.column-lg {
+  width: 410px;
+}
+
+.column-radio-first {
+  padding-left: 80px;
+  padding-right: 20px;
+  width: 40px;
+}
+
+.column-radio {
+  width: 40px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+label {
+  display: inline-block;
+}
 .body {
   background-color: #1A3B54;
+}
+
+.orange {
+  color: #F5A369;
+  border-bottom: 1px dotted black;
 }
 .greyBody {
   background-color: #EFEFEF;
@@ -127,7 +174,32 @@ body {
   box-shadow: 0 0 5px 2px grey;
   padding: 20px 60px 20px 40px;
   background-color: white;
-  max-width: 660px;
+  max-width: 600px;
+}
+
+input.radio {
+  display: inline-block;
+  width: auto;
+}
+
+label {
+  display: inline-block;
+}
+
+.page2 {
+  min-height: 500px;
+}
+
+.page4 {
+  min-height: 400px;
+}
+
+.page4 h4, h5, label, p {
+  color: grey;
+}
+
+.page4 p {
+  font-size: 18px;
 }
 
 .signupForm input {
@@ -194,6 +266,10 @@ body {
   box-shadow: 0 0 0 4px #F5A369;
 }
 
+.past p {
+  opacity: .4;
+}
+
 .slider-pager .slider-pager-page {
   display: none;
 }
@@ -218,6 +294,86 @@ body {
 .dashInfo {
   background-color: white;
   width: 800px;
-  min-height: 400px;
+  min-height: 200px;
   margin: 0 auto;
 }
+
+.addAssociation  {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.dots {
+  border-bottom: 2px dotted #A49FA7;
+}
+
+.purchaseItem, .purchaseItem h3 {
+  color: #D1D8DD;
+}
+
+.purchase, .purchase h3 {
+  color: #82BFE9;
+}
+
+.icon {
+  font-size: 47px;
+}
+
+.picture {
+  font-size: 75px;
+}
+
+.total {
+  color: #A49EA9;
+}
+
+.amount {
+  color: #52C28D;
+}
+
+.step3 {
+  min-width: 1025px;
+}
+
+.colu {
+  width: 120px;
+  padding-left: 30px;
+}
+
+.colu-med {
+  width: 140px;
+  padding-left: 30px;
+}
+
+.colu-first {
+  width: 150px;
+}
+
+.colu-lg {
+  width: 502px;
+  padding-left: 10%;
+}
+
+.button-review {
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  background-color: #F5A369;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.item .item-radio {
+  padding-top: 10px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.radioLabel { 
+  display: inline; 
+  width: 200px; 
+}​
+
