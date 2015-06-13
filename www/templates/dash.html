@@ -20,7 +20,7 @@
               <div class="col" ng-repeat="association in associations">
                 <a href="/#/associations/{{association.name}}"><h4>{{association.name}}</h4></a>
                 <p>Number of Homes: {{association.houses.length}}</p>
-                <p>Violations: {{association.houses[0].violations}}</p>
+                <p>Violations: {{association.houses.violations}}</p>
                 <p>Maintenance Requests: 0</p>
               </div>
             </div>

@@ -1,8 +1,17 @@
 angular.module('starter.controllers', [])
 
 
-.controller('SignupCtrl', function($scope, $http, $state) {
+.controller('SignupCtrl', function($scope, $http, $state, $location, Prices) {
   $scope.user = {username: "", company: "", address: "", address2: "", city: "", state: "", zipcode: "", tel: "", email: "", passwordDigest: ""};
+  
+  $scope.numberOfHomes = 0;
+  $http.get("http://localhost:3000/token").
+    success(function(data, status, config) {
+      console.log(data);
+    }).
+    error(function(data, status, config) {
+      console.log(data);
+    });
   $scope.addUser = function() {
     console.log($scope.user);
     $http.post("http://localhost:3000/user/new", $scope.user).
@@ -16,6 +25,37 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $state.href(login);
   }
+
+//PRICE PAGE 
+  $scope.prices = Prices.all();
+  $scope.total = 0;
+  $scope.totalPrice;
+    //-- create the selected price array
+    $scope.selectedPrice = {};
+    $scope.selectedPrice[1] = true;
+    $scope.totalPrice = $scope.prices[1]
+    //-- add the id to an array with a true-ey value
+    $scope.addOrRemoveClassFromMe = function(id) {
+    //-- Set selected peeps as true/false
+    if($scope.selectedPrice[id] != 1) {
+      $scope.selectedPrice[1] = false;
+      $scope.selectedPrice[id] = true;
+    } if ($scope.selectedPrice[id] == 1) {
+      $scope.selectedPrice[0] = false;
+      $scope.selectedPrice[2] = false;
+      $scope.selectedPrice[id] = true;
+    } if ($scope.selectedPrice[id] == 2) {
+      $scope.selectedPrice[0] = false
+      $scope.selectedPrice[1] = false;
+      $scope.selectedPrice[id] = true;
+    } if ($scope.selectedPrice[id] == 0) {
+      $scope.selectedPrice[1] = false;
+      $scope.selectedPrice[2] = false;
+      $scope.selectedPrice[id] = true;
+    }
+    $scope.totalPrice = $scope.prices[id]
+    console.log($scope.totalPrice);
+  };
 })
 
 
@@ -70,6 +110,7 @@ angular.module('starter.controllers', [])
     error(function(d, stat, conf) {
       console.error('d1',d);
     });
+  $http.get("http://localhost")
 
   $scope.addHouse = function() {
     console.log($scope.house); //Object {address: "some address", street: "some street"}
@@ -86,7 +127,7 @@ angular.module('starter.controllers', [])
 
   $scope.addViolation = function() {
     console.log($scope.violations);
-    $http.post("http://localhost:3000/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street}).
+    $http.post("http://localhost:3000/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street} + "/new").
       success(function(data) {
         $scope.violations = data;
       }).

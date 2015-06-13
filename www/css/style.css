@@ -10,6 +10,19 @@ Green (buttons, icons): 00A551
 Red (icons):*/
 /* Login */
 
+.purchaseItems {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.purchaseItem, .purchaseItem h3 {
+  color: #D1D8DD;
+}
+
+.selected, .selected h3 {
+  color: #82BFE9;
+}
+
 .label {
   font-weight: bold;
 }
@@ -26,7 +39,7 @@ Red (icons):*/
   margin-left: 40px;
   border: 1px solid black;
   background: transparent;
-  width: 40px;
+  width: 45px;
   padding-left: 10px;
   font-size: 16px;
   line-height: 2;
@@ -319,13 +332,10 @@ label {
   border-bottom: 2px dotted #A49FA7;
 }
 
-.purchaseItem, .purchaseItem h3 {
-  color: #D1D8DD;
-}
 
-.purchase, .purchase h3 {
+/*.purchase, .purchase h3 {
   color: #82BFE9;
-}
+}*/
 
 .icon {
   font-size: 47px;

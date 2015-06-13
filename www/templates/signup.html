@@ -108,24 +108,25 @@
           <input type="text" placeholder="Name of Association">
         </div>
         <div class="col col-10"></div>
-          <input type="number" placeholder="Number of Homes">
+          <input type="number" ng-model="numberOfHomes"placeholder="Number of Homes">
         </div>
-      <div class="purchaseItems">
-        <div class="purchaseItem purchase">
+      <div class="purchaseItems" ng-repeat="price in prices">
+        <div class="purchaseItem purchase" ng-class="{selected: selectedPrice[price.id]}" ng-click="addOrRemoveClassFromMe(price.id)">
           <div class="row">
             <div class="col col-20">
               <i class="icon ion-checkmark-circled"></i>
             </div>
             <div class="col col-75">
-              <h3 class="dots">Essentials</h3>
-              <p>$0.50 per home ($100 minimum)<br>
-                $0.35 per each home over 500</p>
+              <h3 class="dots">{{price.name}}</h3>
+              <p>${{price.pricing | number: 2}} per home (${{price.minimum}} minimum)<br>
+                ${{price.extra | number: 2}} per each home over 500</p>
             </div>
             <div class="col">
-              <i class="picture ion-image"></i>
+              <i class="picture {{price.image}}"></i>
             </div>
           </div>
         </div>
+       <!--  <a ng-class="{ activate: activePath=='/test2' }">
           <div class="purchaseItem">
           <div class="row">
             <div class="col col-20">
@@ -140,7 +141,8 @@
               <i class="picture ion-images"></i>
             </div>
           </div>
-        </div>
+        </div></a>
+        <a ng-class="{ activate: activePath=='/test3' }">
           <div class="purchaseItem">
           <div class="row">
             <div class="col col-20">
@@ -155,9 +157,9 @@
               <i class="picture ion-android-camera"></i>
             </div>
           </div>
+        </div></a> -->
         </div>
-          <h4 class="total">Total: <span class="amount">${{total}}</span></h4>
-      </div>
+      <h4 class="total">Total: <span class="amount">${{totalPrice.pricing * numberOfHomes | number: 2}}</span></h4>
     <button type="submit" class="button button-full" ion-wizard-next>NEXT STEP</button>
   </form>
 </div>
@@ -249,7 +251,7 @@
       </div>
       <div class="col col-10"></div>
       <div class="form-input col">
-        <button type="submit" class="button-review" ion-wizard-next>REVIEW ORDER</button>
+        <button type="submit" onclick="homes()" class="button-review" ion-wizard-next>REVIEW ORDER</button>
       </div>
     </div>
   </form>
@@ -286,15 +288,15 @@
     </div>
   </div>
   <div class="purchaseItems">
-  <div class="purchaseItem purchase">
+  <div class="purchaseItem selected">
           <div class="row">
             <div class="col col-20">
               <i class="icon ion-checkmark-circled"></i>
             </div>
             <div class="col col-75">
-              <h3 class="dots">Essentials</h3>
-              <p>$0.50 per home ($100 minimum)<br>
-                $0.35 per each home over 500</p>
+              <h3 class="dots">{{totalPrice.name}}</h3>
+              <p>${{totalPrice.pricing | number: 2}} per home (${{totalPrice.minimum}} minimum)<br>
+                ${{totalPrice.extra}} per each home over 500</p>
             </div>
             <div class="col">
               <i class="picture ion-image"></i>
@@ -302,7 +304,7 @@
           </div>
         </div>
       </div>
-      <h4 class="total label">Total: <span class="amount">${{total}}</span></h4>
+      <h4 class="total label">Total: <span class="amount">${{450 + totalPrice.pricing * numberOfHomes | number: 2}}</span></h4>
 <!--     <label for="terms">I've read and accept the <a href="#">Terms & Conditions</a>
  -->      
  <div class="row">
