@@ -70,7 +70,7 @@ angular.module('starter.controllers', [])
   $scope.loginUser = {email: "", password: ""};
   $scope.wrongPass = "";
   $scope.login = function() {
-    $http.post("https://hoa-front.herokuapp.com/login", $scope.loginUser).
+    $http.post("https://hoaserver2.herokuapp.com/login", $scope.loginUser).
       success(function(data, status, config) {
         console.log(data);
         if(data) {
@@ -91,7 +91,7 @@ angular.module('starter.controllers', [])
   // $http.get('http://localhost/houses', function(success, error) {
   //   }
   // })
-  $http.get("https://hoa-front.herokuapp.com/associations").
+  $http.get("https://hoaserver2.herokuapp.com/association").
     success(function(data, status, config) {
       $scope.associations = data;
       }).
@@ -100,7 +100,7 @@ angular.module('starter.controllers', [])
     });
 
   $scope.addAssociation = function() {
-    $http.post("https://hoa-front.herokuapp.com/associations").
+    $http.post("https://hoaserver2.herokuapp.com/association").
       success(function(data, status, config) {
         $scope.associations = data;
       }).
