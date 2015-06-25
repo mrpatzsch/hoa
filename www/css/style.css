@@ -406,3 +406,413 @@ label {
   display: inline; 
   width: 200px; 
 }​
+||||||| merged common ancestors
+=======
+
+
+/*Orange (logos, buttons): F5A369
+Light Blue (logos, buttons, icons): 82BFE9
+Dark Blue (bgs, text): 1A3B54
+Grey (text): A49FA7
+Light Grey (bg): EFEFEF
+Green (buttons, icons): 00A551
+Red (icons):*/
+/* Login */
+
+
+.confirmation {
+  margin: 0 auto;
+  background-color: white;
+  height: 220px;
+  width: 500px;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+}
+.purchaseItems {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.purchaseItem, .purchaseItem h3 {
+  color: #D1D8DD;
+}
+
+.selected, .selected h3 {
+  color: #82BFE9;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.smallSpace {
+  padding-bottom: 5px;
+}
+
+.noUnderline {
+  text-decoration: none;
+}
+
+.select {
+  margin-left: 40px;
+  border: 1px solid black;
+  background: transparent;
+  width: 45px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 2;
+  height: 30px;
+}
+
+.column-lg {
+  width: 410px;
+}
+
+.form-title {
+  text-align: center;
+  color: #82BFE9;
+  padding: 10px 0 10px 0;
+}
+
+
+.column-radio-first {
+  padding-left: 80px;
+  padding-right: 20px;
+  width: 40px;
+}
+
+.column-radio {
+  width: 40px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+label {
+  display: inline-block;
+}
+.body {
+  background-color: #1A3B54;
+}
+
+.orange {
+  color: #F5A369;
+  border-bottom: 1px dotted black;
+}
+.greyBody {
+  background-color: #EFEFEF;
+}
+
+.bar-footer {
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none;
+    border-top: none;
+}
+.loginPage {
+  background-color: #1A3B54;
+  text-align: center;
+}
+.mainLogin {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.login {
+  width: 100%;
+  margin: 15px 0 20px 0;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.loginForm {
+  margin: 0 auto;
+  background-color: white;
+  height: 320px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+}
+
+.form-links {
+  font-size: 10px;
+  padding-top: 20px;
+}
+
+.form-links a {
+  padding: 0 15px 0 15px;
+  color: #A49FA7;
+}
+
+.form-links a:hover {
+  color: #A49FA7;
+}
+
+.mainLogin h3 {
+  padding-bottom: 10px;
+  color: #82BFE9;
+}
+
+.loginForm input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 4px;
+}
+
+.btn-orange {
+  background-color: #F5A369;
+  color: white;
+  margin-top: 30px;
+  border-radius: 5px;
+  width: 100%;
+}
+/* **************************** */
+
+
+body {
+  font-family: Helvetica;
+}
+#logo {
+  height: 70px;
+  width: 300px;
+}
+.nav {
+  background-color: white;
+  height: 80px;
+}
+.nav img {
+  margin: 0 auto;
+}
+
+.loginFooter {
+    background-color: #1A3B54;
+}
+
+.loginFooter p {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
+.signupFooter {
+  background-color: #EFEFEF;
+}
+
+.signupFooter p {
+  text-align: center;
+  margin: 0 auto;
+  color: #A49FA7;
+}
+
+.signupForm {
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 2px grey;
+  -moz-box-shadow: 0 0 5px 2px grey;
+  box-shadow: 0 0 5px 2px grey;
+  padding: 20px 60px 20px 40px;
+  background-color: white;
+  max-width: 600px;
+}
+
+input.radio {
+  display: inline-block;
+  width: auto;
+}
+
+label {
+  display: inline-block;
+}
+
+.page2 {
+  min-height: 500px;
+}
+
+.page4 {
+  min-height: 400px;
+}
+
+.form-title h4 {
+  color: #82BFE9;
+}
+
+.page4 .total, .page4 h5, label, p {
+  color: grey;
+}
+
+.page4 {
+  font-size: 18px;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.signupForm input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 10px 0px 10px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.button-full {
+  color: white;
+  background-color: #F5A369;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.form-input {
+  padding: 10px 0 10px 0;
+}
+.signupPage {
+  background-color: #EFEFEF;
+  padding-top: 30px;
+}
+
+.progress {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.progressItem {
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.progressItem p {
+  line-height: 66px;
+  text-align: center;
+  border: 2px solid white;
+  box-shadow: 0 0 0 4px #A49FA7;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background-color: #A49FA7;
+  box-sizing: border-box;
+  max-width: none;
+  display: table;
+  margin: 0 auto;
+}
+
+.active p{
+  background-color: #F5A369;
+  box-shadow: 0 0 0 4px #F5A369;
+}
+
+.past p {
+  opacity: .4;
+}
+
+.slider-pager .slider-pager-page {
+  display: none;
+}
+
+.arrow {
+  color: orange;
+}
+
+/* DASHBOARD */
+
+.houseImage {
+  width: 200px;
+}
+.mainDash {
+  margin-top: 100px;
+}
+
+.mainDash h3 {
+  color: #82BFE9;
+  text-align: center;
+}
+.dashInfo {
+  background-color: white;
+  width: 800px;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+.addAssociation  {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.dots {
+  border-bottom: 2px dotted #A49FA7;
+}
+
+
+/*.purchase, .purchase h3 {
+  color: #82BFE9;
+}*/
+
+.icon {
+  font-size: 47px;
+}
+
+.picture {
+  font-size: 75px;
+}
+
+.total {
+  color: #A49EA9;
+}
+
+.amount {
+  color: #52C28D;
+}
+
+.step3 {
+  min-width: 1025px;
+}
+
+.colu {
+  width: 120px;
+  padding-left: 30px;
+}
+
+.colu-med {
+  width: 140px;
+  padding-left: 30px;
+}
+
+.colu-first {
+  width: 150px;
+}
+
+.colu-lg {
+  width: 502px;
+  padding-left: 10%;
+}
+
+.button-review {
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  background-color: #F5A369;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.item .item-radio {
+  padding-top: 10px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.radioLabel { 
+  display: inline; 
+  width: 200px; 
+}​
+
