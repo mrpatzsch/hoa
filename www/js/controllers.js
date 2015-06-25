@@ -131,7 +131,7 @@ $scope.associationName = {name: ""};
     });
   $scope.house = {address: "", street: ""};
   $scope.violations = {address: "", street: ""};
-  $http.get("http://localhost:3000/associations/" + $stateParams.name).
+  $http.get("https://hoaserver2.herokuapp.com/associations/" + $stateParams.name).
     success(function(d, stat, conf) {
       $scope.association = d;
       $scope.associationHouses = d.houses;
@@ -144,7 +144,7 @@ $scope.associationName = {name: ""};
   $scope.addHouse = function() {
     console.log($scope.house); //Object {address: "some address", street: "some street"}
     console.log($scope.house.address, $scope.house.street);
-    $http.post("http://localhost:3000/associations/" + $scope.association.name, {address: $scope.house.address, street: $scope.house.street}).
+    $http.post("https://hoaserver2.herokuapp.com/associations/" + $scope.association.name, {address: $scope.house.address, street: $scope.house.street}).
       success(function(data) {
         $scope.association = data;
         $scope.house = {address: "", street: ""};
@@ -156,7 +156,7 @@ $scope.associationName = {name: ""};
 
   $scope.addViolation = function() {
     console.log($scope.violations);
-    $http.post("http://localhost:3000/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street} + "/new").
+    $http.post("https://hoaserver2.herokuapp.com/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street} + "/new").
       success(function(data) {
         $scope.violations = data;
       }).
@@ -167,7 +167,7 @@ $scope.associationName = {name: ""};
 })
 
 .controller('HouseCtrl', function($scope, $http, $stateParams) {
-  $http.get("http://localhost:3000/associations/" + $stateParams.name + "/house/" + $stateParams.id).
+  $http.get("https://hoaserver2.herokuapp.com/associations/" + $stateParams.name + "/house/" + $stateParams.id).
     success(function(data) {
       $scope.house = data
       console.log(data.violations)
