@@ -11,6 +11,10 @@ Red (icons):*/
 /* Login */
 
 
+.bar {
+  border-style: none;
+}
+
 .confirmation {
   margin: 0 auto;
   background-color: white;
