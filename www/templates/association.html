@@ -1,0 +1,59 @@
+<ion-view>
+  <ion-content class="greyBody">
+<div class="dashPage">
+  <div class="mainDash" ng-model="association">
+    <h3>{{association.name}}</h3>
+    <div class="dashInfo">
+      <div class="row">
+        <div class="col">
+          <div class="complexContent">
+            <div class="row">
+              <div class="col">
+                <img class="houseImage" src="http://www.progressivecm.com/greentree/images/entrance.jpg" alt="house">
+              </div>
+              <div class="col">
+                <h4>{{association.name}}</h4>
+                <p>Number of Homes: {{association.houses.length}}</p>
+                <p>Violations: {{association.houses[0].violations.length}}</p>
+                <select>
+                  <option ng-repeat="home in association.houses"><a href="/associations/{{association.name}}/house/{{home._id}}">{{home.address}} {{home.street}}</a></option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h4>Add House</h4>
+                <form method="POST" ng-submit="addHouse()">
+                  <div class="form-input col ">
+                    <input ng-model="house.address" class="ASO" id="ASOaddress" autofocus type="text" placeholder="Address Number">
+                  </div>
+                  <div class="form-input col">
+                    <input ng-model="house.street" class="ASO" id="ASOstreet" type="text" placeholder="Street">
+                  </div>
+                  <div class="form-input col">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+              </form>
+            </div>
+            <div class="col">
+              <h4>Add Violation</h4>
+              <form method="POST" ng-submit="addViolation()">
+                  <div class="form-input col ">
+                    <input ng-model="violations.address" class="ASO" id="ASOaddress" autofocus type="text" placeholder="Address Number">
+                  </div>
+                  <div class="form-input col">
+                    <input ng-model="violations.street" class="ASO" id="ASOstreet" type="text" placeholder="Street">
+                  </div>
+                  <div class="form input col">
+                    <textarea ng-model="violation.info" class="ASO" id="ASOviolation" type="text" placeholder="Explain Violation">
+                      </textarea>
+                  <div class="form-input col">
+                    <button type="submit" class="button">Add Vioalation</button>
+                </div>
+              </form>
+            </div>
+    </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view>
+  <ion-content class="greyBody">
+<div class="dashPage">
+  <div class="mainDash">
+    <h3>My Active Associations</h3>
+    <div>
+<!--     <form class="addAssociation" ng-submit="addAssociation()">
+      <input ng-model='name' placeholder="Association Name">
+      <button class="button button-small" type="submit"></button>
+    </form> -->
+  </div>
+    <div class="dashInfo">
+      <div class="row">
+        <div class="col">
+          <div class="complexContent">
+            <div class="row">
+              <div class="col">
+                <img class="houseImage" src="http://www.progressivecm.com/greentree/images/entrance.jpg" alt="house">
+              </div>
+              <div class="col" ng-repeat="association in associations">
+                <a href="/#/associations/{{association.name}}"><h4>{{association.name}}</h4></a>
+                <p>Number of Homes: {{association.houses.length}}</p>
+                <p>Violations: {{association.houses.violations}}</p>
+                <p>Maintenance Requests: 0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>
