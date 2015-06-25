@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-content class="body">
+<div class="loginPage">
+  <div class="mainLogin">
+        <div class="loginForm">
+          <h3>Log in</h3>
+          <form ng-submit="login()">
+            <div id="wrongPass">{{wrongPass}}</div>
+            <input name="username" id="username" type="text" class="login form-control" placeholder="Email Address" ng-model="loginUser.email">
+            <input name="password" id="password" type="password" class="login form-control" placeholder="Password" ng-model="loginUser.password">
+            <button type="submit" class="button btn-large btn-orange">SIGN IN</button>
+            <div class="form-links">
+              <p class="form-links"><a href="#" class="forgot">Forgot Password?</a>
+              <a href="/#/signup" class="signup">Sign Up / Register</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+      <ion-footer-bar class="loginFooter">
+        <p>Copyright &copy; HOAtrac 2015. HOAtrac.com. All Rights Reserved</p>
+    </ion-footer-bar>
+
+</ion-view>
