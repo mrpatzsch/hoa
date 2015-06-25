@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
 
   $scope.addUser = function() {
     console.log($scope.user);
-    $http.post("http://hoaserver2.herokuapp.com/user/new", $scope.user).
+    $http.post("https://hoaserver2.herokuapp.com/user/new", $scope.user).
       success(function(data, status, config) {
         console.log(data);
       }).
