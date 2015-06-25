@@ -91,7 +91,7 @@ angular.module('starter.controllers', [])
   // $http.get('http://localhost/houses', function(success, error) {
   //   }
   // })
-  $http.get("https://hoaserver2.herokuapp.com/association").
+  $http.get("https://hoaserver2.herokuapp.com/associations").
     success(function(data, status, config) {
       $scope.associations = data;
       }).
@@ -100,7 +100,7 @@ angular.module('starter.controllers', [])
     });
 
   $scope.addAssociation = function() {
-    $http.post("https://hoaserver2.herokuapp.com/association").
+    $http.post("https://hoaserver2.herokuapp.com/associations/new").
       success(function(data, status, config) {
         $scope.associations = data;
       }).
