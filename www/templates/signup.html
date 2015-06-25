@@ -179,7 +179,9 @@
     </div>
   </div>
     <h4 class="form-title">STEP 3 - Billing Info</h4>
-    <form class="signupForm step3" ng-submit="billing()">
+    <div class="signupForm step3">
+      <h1 class="form-title">Insert Stripe Here</h1>
+    <!-- <form class="signupForm step3" ng-submit="billing()">
     <div class="row">
       <div class="form-input column-lg">
         <input ng-model="bill.cardholderName" class="SI" id="SIname" autofocus type="text" placeholder="Cardholder Name">
@@ -192,7 +194,7 @@
           <input type="radio" name="paymentType" value="CC">
         </div>
         <p>Credit Card</p> 
-      </div>
+      </div> -->
         <!-- <div class="row">
           <div class="col col-10"></div>
           <div class="form-input col">
@@ -213,7 +215,7 @@
           </div>
         </div>
  --> 
-  <div class="row">
+  <!-- <div class="row">
     <div class="form-input col">
       <input ng-model="bill.address" name="signup[address]" class="SI" id="SIaddress" type="text" placeholder="Address">
     </div>
@@ -250,11 +252,9 @@
         <input ng-model="bill.tel" class="SI" type="tel" placeholder="Phone Number">
       </div>
       <div class="col col-10"></div>
-      <div class="form-input col">
-        <button type="submit" onclick="homes()" class="button-review" ion-wizard-next>REVIEW ORDER</button>
-      </div>
+      <div class="form-input col"> -->
+        <button onclick="homes()" class="button-review" ion-wizard-next>REVIEW ORDER</button>
     </div>
-  </form>
 </div>
 </ion-slide>
 
@@ -304,7 +304,7 @@
           </div>
         </div>
       </div>
-      <h4 class="total label">Total: <span class="amount">${{450 + totalPrice.pricing * numberOfHomes | number: 2}}</span></h4>
+      <h4 class="total label">Total: <span class="amount">${{totalPrice.pricing * numberOfHomes | number: 2}}</span></h4>
 <!--     <label for="terms">I've read and accept the <a href="#">Terms & Conditions</a>
  -->      
  <div class="row">

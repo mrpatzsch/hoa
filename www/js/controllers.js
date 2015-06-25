@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
 
   $scope.addUser = function() {
     console.log($scope.user);
-    $http.post("http://localhost:3000/user/new", $scope.user).
+    $http.post("http://hoaserver2.herokuapp.com/user/new", $scope.user).
       success(function(data, status, config) {
         console.log(data);
       }).
@@ -19,7 +19,6 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $state.href(login);
   }
-
 
 //PRICE PAGE 
   $scope.prices = Prices.all();
