@@ -84,6 +84,7 @@ angular.module('starter.controllers', [])
         console.log(data);
       });
   };
+  
 })
 .controller('ConfirmCtrl', function($scope) {})
 
@@ -91,6 +92,7 @@ angular.module('starter.controllers', [])
   // $http.get('http://localhost/houses', function(success, error) {
   //   }
   // })
+$scope.associationName = ""
   $http.get("https://hoaserver2.herokuapp.com/associations").
     success(function(data, status, config) {
       $scope.associations = data;
@@ -100,7 +102,7 @@ angular.module('starter.controllers', [])
     });
 
   $scope.addAssociation = function() {
-    $http.post("https://hoaserver2.herokuapp.com/associations/new").
+    $http.post("https://hoaserver2.herokuapp.com/associations/new", $scope.associationName).
       success(function(data, status, config) {
         $scope.associations = data;
       }).
