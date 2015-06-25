@@ -3,6 +3,7 @@ angular.module('starter.controllers', [])
 
 .controller('SignupCtrl', function($scope, $http, $state, $location, Prices) {
   $scope.user = {username: "", company: "", address: "", address2: "", city: "", state: "", zipcode: "", tel: "", email: "", passwordDigest: ""};
+  $scope.associationName = "";
   
   $scope.numberOfHomes = 0;
 
@@ -16,6 +17,18 @@ angular.module('starter.controllers', [])
         console.log(data);
       });
   };
+
+  $scope.addAssociation = function() {
+    console.log($scope.associationName);
+    $http.post("https://hoaserver2.herokuapp.com/association/new", $scope.associationName).
+      success(function(data, status, config) {
+        console.log(data);
+      }).
+      error(function(data, status, config) {
+        console.error(data);
+      });
+  };
+
   $scope.login = function() {
     $state.href(login);
   }
@@ -57,7 +70,7 @@ angular.module('starter.controllers', [])
   $scope.loginUser = {email: "", password: ""};
   $scope.wrongPass = "";
   $scope.login = function() {
-    $http.post("http://localhost:3000/login", $scope.loginUser).
+    $http.post("https://hoa-front.herokuapp.com/login", $scope.loginUser).
       success(function(data, status, config) {
         console.log(data);
         if(data) {
@@ -78,7 +91,7 @@ angular.module('starter.controllers', [])
   // $http.get('http://localhost/houses', function(success, error) {
   //   }
   // })
-  $http.get("http://localhost:3000/associations").
+  $http.get("https://hoa-front.herokuapp.com/associations").
     success(function(data, status, config) {
       $scope.associations = data;
       }).
@@ -87,7 +100,7 @@ angular.module('starter.controllers', [])
     });
 
   $scope.addAssociation = function() {
-    $http.post('http://localhost:3000/associations').
+    $http.post("https://hoa-front.herokuapp.com/associations").
       success(function(data, status, config) {
         $scope.associations = data;
       }).
