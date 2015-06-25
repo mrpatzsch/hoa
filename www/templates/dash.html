@@ -13,6 +13,10 @@
       <div class="row">
         <div class="col">
           <div class="complexContent">
+            <form ng-submit="addAssociation()">
+                  <input type="text" placeholder="Name of Association" ng-model="associationName">
+                  <button type="submit">Submit</button>
+                </form>
             <div class="row">
               <div class="col">
                 <img class="houseImage" src="http://www.progressivecm.com/greentree/images/entrance.jpg" alt="house">
@@ -22,10 +26,7 @@
                 <p>Number of Homes: {{association.houses.length}}</p>
                 <p>Violations: {{association.houses.violations}}</p>
                 <p>Maintenance Requests: 0</p>
-                 <form ng-submit="addAssociation()">
-                  <input type="text" placeholder="Name of Association" ng-model="associationName">
-                  <button type="submit">Submit</button>
-                </form>
+                 
               </div>
             </div>
           </div>
