@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
 .controller('SignupCtrl', function($scope, $http, $state, $location, Prices) {
   $scope.user = {username: "", company: "", address: "", address2: "", city: "", state: "", zipcode: "", tel: "", email: "", passwordDigest: ""};
   $scope.associationName = "";
-  
   $scope.numberOfHomes = 0;
 
   $scope.addUser = function() {
