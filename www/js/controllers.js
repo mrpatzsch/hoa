@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
 
   $scope.addUser = function() {
     console.log($scope.user);
-    $http.post("https://hoaserver2.herokuapp.com/user/new", $scope.user).
+    $http.post("https://hoatracserver.herokuapp.com/user/new", $scope.user).
       success(function(data, status, config) {
         console.log(data);
       }).
@@ -19,7 +19,7 @@ angular.module('starter.controllers', [])
 
   $scope.addAssociation = function() {
     console.log($scope.associationName);
-    $http.post("https://hoaserver2.herokuapp.com/association/new", $scope.associationName).
+    $http.post("https://hoatracserver.herokuapp.com/association/new", $scope.associationName).
       success(function(data, status, config) {
         console.log(data);
       }).
@@ -31,6 +31,14 @@ angular.module('starter.controllers', [])
   $scope.login = function() {
     $state.href(login);
   }
+  $scope.$watch(function() {
+      return $scope.numberOfHomes;
+    }, function(newValue, oldValue) {
+      console.log("change detected:",newValue);
+      $scope.numberOfHomes = newValue;
+    });
+
+
 
 //PRICE PAGE 
   $scope.prices = Prices.all();
@@ -69,7 +77,7 @@ angular.module('starter.controllers', [])
   $scope.loginUser = {email: "", password: ""};
   $scope.wrongPass = "";
   $scope.login = function() {
-    $http.post("https://hoaserver2.herokuapp.com/login", $scope.loginUser).
+    $http.post("https://hoatracserver.herokuapp.com/login", $scope.loginUser).
       success(function(data, status, config) {
         console.log(data);
         if(data) {
@@ -92,7 +100,7 @@ angular.module('starter.controllers', [])
   //   }
   // })
 $scope.associationName = {name: ""};
-  $http.get("https://hoaserver2.herokuapp.com/associations").
+  $http.get("https://hoatracserver.herokuapp.com/associations").
     success(function(data, status, config) {
       $scope.associations = data;
       }).
@@ -102,7 +110,7 @@ $scope.associationName = {name: ""};
 
   $scope.addAssociation = function() {
     console.log($scope.associationName);
-    $http.post("https://hoaserver2.herokuapp.com/associations/new", $scope.associationName).
+    $http.post("https://hoatracserver.herokuapp.com/associations/new", $scope.associationName).
       success(function(data, status, config) {
         $scope.associations = data;
       }).
@@ -130,7 +138,7 @@ $scope.associationName = {name: ""};
     });
   $scope.house = {address: "", street: ""};
   $scope.violations = {address: "", street: ""};
-  $http.get("https://hoaserver2.herokuapp.com/associations/" + $stateParams.name).
+  $http.get("https://hoatracserver.herokuapp.com/associations/" + $stateParams.name).
     success(function(d, stat, conf) {
       $scope.association = d;
       $scope.associationHouses = d.houses;
@@ -143,7 +151,7 @@ $scope.associationName = {name: ""};
   $scope.addHouse = function() {
     console.log($scope.house); //Object {address: "some address", street: "some street"}
     console.log($scope.house.address, $scope.house.street);
-    $http.post("https://hoaserver2.herokuapp.com/associations/" + $scope.association.name, {address: $scope.house.address, street: $scope.house.street}).
+    $http.post("https://hoatracserver.herokuapp.com/associations/" + $scope.association.name, {address: $scope.house.address, street: $scope.house.street}).
       success(function(data) {
         $scope.association = data;
         $scope.house = {address: "", street: ""};
@@ -155,7 +163,7 @@ $scope.associationName = {name: ""};
 
   $scope.addViolation = function() {
     console.log($scope.violations);
-    $http.post("https://hoaserver2.herokuapp.com/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street} + "/new").
+    $http.post("https://hoatracserver.herokuapp.com/associations/" + $scope.association.name, {address: $scope.violations.address, street: $scope.violations.street} + "/new").
       success(function(data) {
         $scope.violations = data;
       }).
@@ -166,7 +174,7 @@ $scope.associationName = {name: ""};
 })
 
 .controller('HouseCtrl', function($scope, $http, $stateParams) {
-  $http.get("https://hoaserver2.herokuapp.com/associations/" + $stateParams.name + "/house/" + $stateParams.id).
+  $http.get("https://hoatracserver.herokuapp.com/associations/" + $stateParams.name + "/house/" + $stateParams.id).
     success(function(data) {
       $scope.house = data
       console.log(data.violations)
